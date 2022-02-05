@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <me.ibrahimsn.lib.SmoothBottomBar
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:backgroundColor="#fa533c"
+            app:textColor="#ffffff"
+            app:textSize="14sp"
+            app:iconSize="24dp"
+            app:indicatorColor="#2DFFFFFF"
+            app:indicatorRadius="16dp"
+            app:sideMargins="10dp"
+            app:itemPadding="10dp"
+            app:iconTint="#C8FFFFFF"
+            app:iconTintActive="#FFFFFF"
+            app:cornerRadius="16dp"
+            app:menu="@menu/menu_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph='@navigation/nav_graph'
+      />
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
